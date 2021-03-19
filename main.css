@@ -6,13 +6,14 @@ body, html {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	font-family:verdana;
+    font-family:'Poppins', sans-serif;
 }
 h1{
 	text-align:center;
 	color:black;
 	font-size:40px;
 	top:30%;
+    font-family: 'Roboto', sans-serif;
 }
 a{
 	font-size: 18px;
@@ -22,7 +23,7 @@ a{
 strong{
 	color: white;
 	font-size: 30px;
-	font-family: verdana;
+	/* font-family: verdana; */
 }
 label{
 	color:white;
@@ -300,13 +301,13 @@ span.psw {
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
+  -webkit-animation-name:fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: 0.4} 
   to {opacity: 1}
 }
 
@@ -319,3 +320,12 @@ span.psw {
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+/* Animate list item */
+.animation1 {
+    transition: transform .2s; /* Animation */
+  }
+  
+  .animation1:hover {
+    transform: scale(1.3); /* (130% zoom)*/
+  }
