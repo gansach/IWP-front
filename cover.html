@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html>
-<body style="background-image:url(images/p2.jpg)">
+<body style="background-image:url(images/clinic.jpg)">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="main.css">
-			<div class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="cover.php" class="logo"><img src="images/cal.png" width="30px" height="30px"><b> Skylabs </b>&nbspAppointment Booking System</a>
+         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item animation1">
+              <a href="#home">Home</a>    
+            </li>
+            <li class="nav-item animation1">
+              <a href="locateus.php">Locate Us</a>
+            </li>
+          </ul>
+         </div> 
+      </nav>
+			<!-- <div class="header">
 				<ul>
-					<li style="float:left;border-right:none"><a href="cover.php" class="logo"><img src="images/cal.png" width="30px" height="30px"><strong> Skylabs </strong>Appointment Booking System</a></li>
+					<li style="float:left;border-right:none"><a href="cover.php" class="logo"><img src="images/cal.png" width="30px" height="30px"><b> Skylabs </b>&nbspAppointment Booking System</a></li>
 					<li><a href="locateus.php">Locate Us</a></li>
 					<li><a href="#home">Home</a></li>
 				</ul>
-			</div>
+			</div> -->
 			<div class="center">
-				<h1>Skylabs</h1><br>
+        <br>
+				<h1>Skylabs</h1>
 				<p style="text-align:center;color:black;font-size:30px;top:35%">Online Appointment Booking System</p><br>
-				<button onclick="document.getElementById('id01').style.display='block'" style="position:absolute;top:50%;left:50%">Login</button>
+				<button class="btn btn-dark btn-lg" onclick="document.getElementById('id01').style.display='block'" style="position:absolute;top:50%;left:44.5%;width: 150px;">Login</button>
 				
 			</div>	
 			<div class="footer">
 				<ul style="position:absolute;top:93%;background-color:black">
-					<li><a href="admin/alogin.php">Admin Login</a></li>
-					<li><a href="admin/mlogin.php">Manager Login</a></li>
+					<li class="animation1"><a href="admin/alogin.php">Admin Login</a></li>
+					<li class="animation1"><a href="admin/mlogin.php">Manager Login</a></li>
 				</ul>
 			</div>
 <div id="id01" class="modal">
   
   <form class="modal-content animate" method="post" action="cover.php">
-    <div class="imgcontainer">
-		<span style="float:left"><h2>&nbsp&nbsp&nbsp&nbspLog In</h2></span>
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <div style="display: flex;" class="imgcontainer">
+		<span style="flex: 1;padding-left: 15px;"><h2 class="text-center">Log In</h2></span>
+      <span style="font-size: 30px;padding-right: 8px;cursor: pointer;" class="d-flex align-items-start text-danger" onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
 	
     <div class="container">
-      <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <!-- <label><b>Username</b></label> -->
+      <input style="border-radius: 10px;" type="text" placeholder="Enter Username" name="uname" required>
 
-      <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-		<button type="submit" name="login">Login</button>
+      <!-- <label><b>Password</b></label> -->
+      <input style="border-radius: 10px;" type="password" placeholder="Enter Password" name="psw" required>
+      <br><br>
+      <div class="d-flex flex-column">
+        <button class="btn btn-dark " type="submit" name="login">Login</button>
 		
-      <input type="checkbox" checked="checked"> Remember me
+        <div class="d-flex flex-row align-items-center" style="margin: auto;width: 32%">
+          <input type="checkbox" checked="checked">
+          <span>Remember me</span> 
+        </div>
+      </div>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <button onclick="document.getElementById('id02').style.display='block';document.getElementById('id01').style.display='none'" style="float:right">Don't have one?</button>
+      <button class="btn btn-danger" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button class="btn btn-dark" onclick="document.getElementById('id02').style.display='block';document.getElementById('id01').style.display='none'" style="float:right">Don't have one?</button>
     </div>
   </form>
 </div>
@@ -66,8 +89,8 @@
     </div>
 	
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-	  <button type="submit" name="signup" style="float:right">Sign Up</button>
+      <button class="btn btn-danger" type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+	  <button class="btn btn-dark" type="submit" name="signup" style="float:right">Sign Up</button>
     </div>
 	
   </form>
