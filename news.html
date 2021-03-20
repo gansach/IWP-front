@@ -1,66 +1,69 @@
 <!DOCTYPE html>
-<html>
-<body style="background-image:url(images/aa.jpg)">
-	<link rel="stylesheet" href="main.css">
-			<div class="header">
-				<ul>
-					<li style="float:left;border-right:none"><strong>Recent News!</strong></li>
-					<li><a href="#book">Book</a></li>
-					<li><a href="#about">Locate Us</a></li>
-					<li><a href="#news">Updates</a></li>
-					<li><a href="#home">Home</a></li>
-				</ul>
-			</div>
-			<div class="slideshow-container">
+<html lang="en">
+  <head>
+    <title>News</title>
+    <link rel="stylesheet" href="assests/bootstrap.css" />
+    <link rel="stylesheet" href="assests/news.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script defer src="assests/news.js"></script>
+  </head>
 
-				<div class="mySlides fade">
-					<div class="numbertext">1 / 3</div>
-					<img src="images/p4.jpg" style="width:100%">
-						<div class="text">Caption Text</div>
-						</div>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="cover.html" class="logo"
+        ><img src="images/cal.png" width="30px" height="30px" /><b> Skylabs </b
+        >&nbspAppointment Booking System</a
+      >
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item animation1">
+            <a href="home.html">Home</a>
+          </li>
+          <li class="nav-item animation1">
+            <a href="locateus.html">Locate Us</a>
+          </li>
+          <li class="nav-item animation1">
+            <a href="book.html">Book</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-						<div class="mySlides fade">
-					<div class="numbertext">2 / 3</div>
-					<img src="images/p5.jpg" style="width:100%">
-					<div class="text">Caption Two</div>
-				</div>
-
-				<div class="mySlides fade">
-					<div class="numbertext">3 / 3</div>
-					<img src="images/p6.jpg" style="width:100%">
-						<div class="text">Caption Three</div>
-						</div>
-
-					</div>
-				<br>
-
-				<div style="text-align:center">
-					<span class="dot"></span> 
-					<span class="dot"></span> 
-					<span class="dot"></span> 
-				</div>
-
-	<script>
-	var slideIndex = 0;
-	showSlides();
-
-	function showSlides() {
-		var i;
-		var slides = document.getElementsByClassName("mySlides");
-		var dots = document.getElementsByClassName("dot");
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";  
-		}
-		slideIndex++;
-		if (slideIndex> slides.length) {slideIndex = 1}    
-		for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(" active", "");
-		}
-		slides[slideIndex-1].style.display = "block";  
-		dots[slideIndex-1].className += " active";
-		setTimeout(showSlides, 2000); // Change image every 2 seconds
-	}
-	</script>
-
-</body>
+    <section id="slideshow">
+      <div class="note">
+        <p>Recent News</p>
+      </div>
+      <div class="slider-container">
+        <div>
+          <div class="slider">
+            <div class="img" id="first">
+              <img src="assests/news-slide1.jfif" />
+            </div>
+            <div class="img">
+              <img src="assests/news-slide2.jfif" />
+            </div>
+            <div class="img">
+              <img src="assests/news-slide3.jfif" />
+            </div>
+            <div class="img">
+              <img src="assests/news-slide4.jfif" />
+            </div>
+            <div class="img">
+              <img src="assests/news-slide1.jfif" />
+            </div>
+            <div class="img" id="last">
+              <img src="assests/news-slide2.jfif" />
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <button class="btn" id="prev"></button>
+          <button class="btn" id="next"></button>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
