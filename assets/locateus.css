@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-image: url(yellowpage.jpg);
+}
+
+#locateus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  height: 85vh;
+}
+
+#locateus .container {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 80vw;
+  max-width: 100%;
+  min-width: 370px;
+}
+
+#locateus h2 {
+  margin-top: 20px;
+  font-size: 2rem;
+}
+#locateus .form-container {
+  display: flex;
+}
+
+#locateus .left-container {
+  flex: 1;
+  background-color: #00b4cf;
+}
+#locateus .right-container {
+  display: flex;
+  flex: 1;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+#locateus .left-container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#locateus .left-container p {
+  font-size: 0.9rem;
+}
+
+#locateus .right-inner-container {
+  width: 70%;
+  text-align: center;
+}
+
+#locateus .left-inner-container {
+  height: 50%;
+  width: 80%;
+  text-align: center;
+  line-height: 22px;
+}
+
+#locateus input,
+#locateus textarea,
+#locateus select {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 5px 0;
+  width: 100%;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+#locateus input:focus,
+#locateus textarea:focus {
+  outline: 1px solid #00b4cf;
+}
+
+#locateus button {
+  border-radius: 20px;
+  border: 1px solid #00b4cf;
+  background-color: #00b4cf;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+#locateus button:hover {
+  opacity: 0.7;
+}
+@media only screen and (max-width: 600px) {
+  #locateus .left-container {
+    display: none;
+  }
+  #locateus .lg-view {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #locateus .sm-view {
+    display: none;
+  }
+}
+
+#locateus form p {
+  text-align: left;
+}
